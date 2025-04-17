@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لعبة التفكير النيون</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="start-screen" style="display: flex;">
+    <button onclick="showLevelScreen()">ابدأ اللعبة</button>
+  </div>
+
+  <div id="level-selection">
+    <h2>اختر المستوى:</h2>
+    <button onclick="startQuiz('easy')">سهل</button>
+    <button onclick="startQuiz('medium')">متوسط</button>
+    <button onclick="startQuiz('hard')">صعب</button>
+  </div>
+
+  <div id="quiz">
+    <div class="question-container">
+      <div id="timer">الوقت: 10 ثوان</div>
+      <div id="question">السؤال هنا</div>
+      <button class="answer-button"></button>
+      <button class="answer-button"></button>
+      <button class="answer-button"></button>
+      <button class="answer-button"></button>
+      <button id="next-button" onclick="nextQuestion()">التالي</button>
+      <div id="score">النقاط: 0</div>
+      <div id="response-message"></div>
+    </div>
+  </div>
+
+  <div id="end-screen">
+    <h2 id="final-message"></h2>
+    <button onclick="restartLevel()">إعادة نفس المستوى</button>
+    <button onclick="showLevelScreen()">اختيار مستوى آخر</button>
+  </div>
+
+  <audio id="correctSound" src="son/soundcorrect.mp3"></audio>
+  <audio id="wrongSound" src="son/soundincorrect.mp3"></audio>
+  <audio id="timeoutSound" src="son/timeout.mp3"></audio>
+ <script src="script.js"></script>
+</body>
+</html>

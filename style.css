@@ -1,0 +1,130 @@
+body {
+  background-color: #080707;
+  background-image: url('image/photoquiz.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto; /* or 1000px 1080px explicitly */
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#start-screen, #level-selection, #quiz, #end-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+}
+
+#level-selection {
+  background-color: rgba(30, 30, 47, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00f0ff;
+  width: 80%;
+  max-width: 700px;
+  max-height: 700px;
+}
+
+#start-screen img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #00f0ff;
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #00a0ff;
+}
+
+.question-container {
+  background-color: rgba(30, 30, 47, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00f0ff;
+  width: 80%;
+  max-width: 700px;
+}
+
+.answer-button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #1a1a2e;
+  color: white;
+  box-shadow: 0 0 8px #ff00c8, 0 0 16px #ff00c8;
+}
+
+.answer-button:hover {
+  background-color: #ff00c8;
+  color: black;
+}
+
+#timer {
+  font-size: 24px;
+  margin: 10px 0;
+  color: white;
+  font-weight: bold;
+}
+
+.red-timer {
+  color: red;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; color: red; }
+  50% { opacity: 0; color:red; }
+  100% { opacity: 1; color: red;}
+}
+
+#score {
+  margin-top: 10px;
+}
+
+.correct-answer {
+  background-color: #00ff88 !important;
+}
+
+.incorrect-answer {
+  background-color: #ff0055 !important;
+}
+
+.correct-response {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#next-button {
+  background-color:#ff00c8;
+  box-shadow: 0 0 8px #ff00c8, 0 0 16px #ff00c8;
+  margin-top: 20px;
+  display: none;
+}
+
+#next-button:hover {
+  background-color:#00f0ff;
+}
